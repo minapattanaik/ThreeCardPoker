@@ -1,0 +1,237 @@
+/* global style */
+.root {
+    -fx-background-color: linear-gradient(to bottom, #f7d680, #d77440, #b63a26);
+    -fx-font-family: "Press Start 2P";
+}
+
+/* title */
+.title-label {
+    -fx-font-size: 28px;
+    -fx-text-fill: #1c141a;
+    -fx-padding: 10 0 20 0;
+}
+
+/* subtitle */
+.subtitle-box {
+    -fx-background-color: #3b3b3b;
+    -fx-border-color: #000000;
+    -fx-border-width: 3px;
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+    -fx-padding: 15;
+}
+
+.subtitle-label {
+    -fx-font-size: 12px;
+    -fx-text-fill: white;
+}
+
+/* text */
+.text-field {
+    -fx-background-color: #f3f0e2;
+    -fx-border-color: #000000;
+    -fx-border-width: 4px;
+    -fx-padding: 10 14 10 14;
+    -fx-font-family: "Press Start 2P";
+    -fx-font-size: 12px;
+    -fx-text-fill: #6a6a6a;
+}
+
+.text-field:focused {
+    -fx-background-color: #fff9e5;
+}
+
+/* connect button */
+.pixel-button {
+    -fx-background-color: #3b3b3b;
+    -fx-text-fill: white;
+    -fx-padding: 8 20 8 20;
+    -fx-border-color: #000000;
+    -fx-border-width: 3;
+    -fx-background-insets: 0;
+    -fx-effect: dropshadow(gaussian, #000000, 0, 0, 3, 3);
+}
+
+.pixel-button:hover {
+    -fx-background-color: #555555;
+}
+
+/* status label */
+.status-label {
+    -fx-text-fill: white;
+    -fx-font-size: 11px;
+}
+
+.dealer-title {
+    -fx-text-fill: #1b1420;
+    -fx-font-size: 14px;
+}
+
+.bet-title {
+    -fx-text-fill: #1b1420;
+    -fx-font-size: 12px;
+}
+
+.bet-circle {
+    -fx-min-width: 110px;
+    -fx-min-height: 110px;
+    -fx-max-width: 110px;
+    -fx-max-height: 110px;
+    -fx-background-color: #fdf8e6;
+    -fx-border-color: #000000;
+    -fx-border-width: 4;
+    -fx-background-radius: 60px;
+    -fx-border-radius: 60px;
+}
+
+.bet-amount {
+    -fx-text-fill: #000;
+    -fx-font-size: 14px;
+}
+
+.arrow-button {
+    -fx-font-size: 8px;
+    -fx-min-width: 24px;
+    -fx-pref-width: 24px;
+    -fx-max-width: 24px;
+    -fx-min-height: 18px;
+    -fx-pref-height: 18px;
+    -fx-max-height: 18px;
+}
+
+.arrow-button:hover {
+    -fx-background-color: #d4d4d4;
+}
+
+.player-title {
+    -fx-font-size: 14px;
+    -fx-text-fill: black;
+}
+
+/* options menu */
+.options-menubar {
+    -fx-background-color: #f9f3e5;
+    -fx-border-color: black;
+    -fx-border-width: 3px;
+}
+
+/* info */
+
+.info-label {
+    -fx-font-size: 10px;
+    -fx-text-fill: #000000;
+}
+
+.info-value {
+    -fx-font-size: 10px;
+    -fx-text-fill: #000000;
+}
+
+/* chip button + sizing */
+.chip-button {
+    -fx-font-family: "Press Start 2P";
+    -fx-font-size: 6px;      /* accommodate for pixel font */
+    -fx-min-width: 22px;
+    -fx-pref-width: 22px;
+    -fx-max-width: 22px;
+    -fx-min-height: 20px;
+    -fx-pref-height: 20px;
+    -fx-max-height: 20px;
+
+    -fx-background-color: #ffffff;
+    -fx-text-fill: #000000;
+    -fx-border-color: #000000;
+    -fx-border-width: 2;
+    -fx-alignment: center;
+    -fx-padding: 0;
+}
+
+/* highlight on click */
+.chip-button:selected {
+    -fx-background-color: #000000;
+    -fx-text-fill: #ffffff;
+}
+
+/* log pane */
+.log-pane {
+    -fx-background-color: transparent;
+    -fx-background: transparent;
+}
+.log-pane .viewport {
+    -fx-background-color: transparent;
+}
+
+.log-pane .content {
+    -fx-background-color: transparent;
+}
+
+.log-message {
+    -fx-font-family: "Press Start 2P";
+    -fx-font-size: 8px;
+    -fx-text-fill: black;
+    -fx-wrap-text: true;
+    -fx-max-width: 210px;
+}
+
+#logVBox {
+    -fx-background-color: #fdf8ee;
+    -fx-border-color: #000000;
+    -fx-border-width: 3;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+}
+
+/* totals */
+.totals-box {
+    -fx-background-color: #fffdf6;
+    -fx-border-color: black;
+    -fx-border-width: 3px;
+    -fx-padding: 12 14;
+    -fx-background-radius: 8;
+    -fx-border-radius: 8;
+}
+
+/* line divider */
+.log-line {
+    -fx-font-size: 10px;
+    -fx-text-fill: black;
+    -fx-border-color: black;
+    -fx-border-width: 0 0 2 0;
+    -fx-padding: 3 0 3 0;
+}
+
+/* RESULTS */
+/* win/lose */
+.title-label {
+    -fx-font-size: 48px;
+    -fx-padding: 20 0;
+}
+
+.info-box {
+    -fx-background-color: #fdf8e6;
+    -fx-border-color: #000000;
+    -fx-border-width: 3px;
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+    -fx-padding: 15;
+}
+
+/* stats box */
+.results-box {
+    -fx-background-color: #fdf8e6;
+    -fx-border-color: black;
+    -fx-border-width: 4px;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+    -fx-padding: 30 40;
+    -fx-alignment: center;
+    -fx-max-width: 600px;
+    -fx-effect: dropshadow(gaussian, #000000, 0, 0, 4, 4);
+}
+
+.results-line {
+    -fx-font-family: "Press Start 2P";
+    -fx-font-size: 16px;
+    -fx-text-fill: black;
+    -fx-alignment: center;
+}

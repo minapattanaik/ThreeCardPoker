@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<StackPane xmlns:fx="http://javafx.com/fxml"
+           fx:controller="GameController"
+           prefWidth="1100" prefHeight="650">
+
+    <Pane fx:id="backgroundPane" />
+
+    <BorderPane pickOnBounds="false">
+
+        <top>
+            <AnchorPane prefHeight="120">
+                <padding>
+                    <Insets top="20" right="20" left="20" bottom="10"/>
+                </padding>
+
+                <VBox alignment="TOP_CENTER" spacing="10"
+                      AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0">
+
+                    <Label text="DEALER CARDS" styleClass="dealer-title"/>
+
+                    <HBox alignment="CENTER" spacing="20">
+                        <ImageView fx:id="dealerCard1" fitWidth="75" preserveRatio="true"/>
+                        <ImageView fx:id="dealerCard2" fitWidth="75" preserveRatio="true"/>
+                        <ImageView fx:id="dealerCard3" fitWidth="75" preserveRatio="true"/>
+                    </HBox>
+                </VBox>
+
+                <HBox alignment="TOP_RIGHT" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0">
+                    <MenuBar styleClass="options-menubar">
+                        <Menu text="OPTIONS">
+                            <MenuItem text="Fresh Start" onAction="#onFreshStart"/>
+                            <MenuItem text="New Look" onAction="#onNewLook"/>
+                            <MenuItem text="Rules" onAction="#onRules"/>
+                            <MenuItem text="Exit" onAction="#onExit"/>
+                        </Menu>
+                    </MenuBar>
+                </HBox>
+            </AnchorPane>
+        </top>
+
+        <center>
+            <VBox alignment="TOP_CENTER" spacing="30">
+                <padding>
+                    <Insets top="20" left="20" right="20" bottom="20"/>
+                </padding>
+
+                <HBox alignment="TOP_CENTER" spacing="80">
+                    <VBox alignment="TOP_CENTER" spacing="8">
+                        <Label text="pair plus" styleClass="bet-title"/>
+                        <StackPane styleClass="bet-circle">
+                            <Label fx:id="pairPlusAmountLabel" text="/$0" styleClass="bet-amount"/>
+                        </StackPane>
+                        <HBox alignment="CENTER" spacing="3">
+                            <Button text="▲" onAction="#onPairPlusIncrease" styleClass="arrow-button"/>
+                            <ToggleButton fx:id="pairPlusChip1" text="1" styleClass="chip-button" onAction="#onPairPlusChipClicked"/>
+                            <ToggleButton fx:id="pairPlusChip5" text="5" styleClass="chip-button" onAction="#onPairPlusChipClicked"/>
+                            <ToggleButton fx:id="pairPlusChip10" text="10" styleClass="chip-button" onAction="#onPairPlusChipClicked"/>
+                            <ToggleButton fx:id="pairPlusChip15" text="15" styleClass="chip-button" onAction="#onPairPlusChipClicked"/>
+                            <ToggleButton fx:id="pairPlusChip25" text="25" styleClass="chip-button" onAction="#onPairPlusChipClicked"/>
+                            <Button text="▼" onAction="#onPairPlusDecrease" styleClass="arrow-button"/>
+                        </HBox>
+                    </VBox>
+
+                    <VBox alignment="TOP_CENTER" spacing="8">
+                        <Label text="ante" styleClass="bet-title"/>
+                        <StackPane styleClass="bet-circle">
+                            <Label fx:id="anteAmountLabel" text="/$0" styleClass="bet-amount"/>
+                        </StackPane>
+                        <HBox alignment="CENTER" spacing="3">
+                            <Button text="▲" onAction="#onAnteIncrease" styleClass="arrow-button"/>
+                            <ToggleButton fx:id="anteChip1" text="1" styleClass="chip-button" onAction="#onAnteChipClicked"/>
+                            <ToggleButton fx:id="anteChip5" text="5" styleClass="chip-button" onAction="#onAnteChipClicked"/>
+                            <ToggleButton fx:id="anteChip10" text="10" styleClass="chip-button" onAction="#onAnteChipClicked"/>
+                            <ToggleButton fx:id="anteChip15" text="15" styleClass="chip-button" onAction="#onAnteChipClicked"/>
+                            <ToggleButton fx:id="anteChip25" text="25" styleClass="chip-button" onAction="#onAnteChipClicked"/>
+                            <Button text="▼" onAction="#onAnteDecrease" styleClass="arrow-button"/>
+                        </HBox>
+                    </VBox>
+
+                    <VBox alignment="TOP_CENTER" spacing="8">
+                        <Label text="play" styleClass="bet-title"/>
+                        <StackPane styleClass="bet-circle">
+                            <Label fx:id="playAmountLabel" text="/$0" styleClass="bet-amount"/>
+                        </StackPane>
+                        <HBox alignment="CENTER" spacing="3" opacity="0" disable="true">
+                            <Button text="▲" styleClass="arrow-button"/>
+                            <ToggleButton text="1" styleClass="chip-button"/>
+                            <ToggleButton text="5" styleClass="chip-button"/>
+                            <ToggleButton text="10" styleClass="chip-button"/>
+                            <ToggleButton text="15" styleClass="chip-button"/>
+                            <ToggleButton text="25" styleClass="chip-button"/>
+                            <Button text="▼" styleClass="arrow-button"/>
+                        </HBox>
+                    </VBox>
+                </HBox>
+
+                <HBox alignment="CENTER" spacing="40">
+                    <Button fx:id="dealButton" text="DEAL" styleClass="pixel-button" onAction="#onDealClicked"/>
+                    <Button fx:id="playButton" text="PLAY" styleClass="pixel-button" onAction="#onPlayClicked"/>
+                    <Button fx:id="foldButton" text="FOLD" styleClass="pixel-button" onAction="#onFoldClicked"/>
+                </HBox>
+
+                <GridPane alignment="BOTTOM_CENTER" hgap="20">
+                    <columnConstraints>
+                        <ColumnConstraints percentWidth="30" halignment="LEFT"/>
+                        <ColumnConstraints percentWidth="40" halignment="CENTER"/>
+                        <ColumnConstraints percentWidth="30" halignment="RIGHT"/>
+                    </columnConstraints>
+
+                    <VBox GridPane.columnIndex="0" alignment="CENTER_LEFT" maxWidth="250" styleClass="subtitle-box">
+                        <Label text="TOTAL WINNINGS:" styleClass="info-label"/>
+                        <Label fx:id="totalWinningsLabel" text="/$0.00" styleClass="info-value"/>
+                        <Region prefHeight="10"/> <Label text="CURRENT ROUND:" styleClass="info-label"/>
+                        <Label fx:id="currentRoundLabel" text="/$0.00" styleClass="info-value"/>
+                    </VBox>
+
+                    <VBox GridPane.columnIndex="1" alignment="BOTTOM_CENTER" spacing="10">
+                        <HBox alignment="CENTER" spacing="20">
+                            <ImageView fx:id="playerCard1" fitWidth="75" preserveRatio="true"/>
+                            <ImageView fx:id="playerCard2" fitWidth="75" preserveRatio="true"/>
+                            <ImageView fx:id="playerCard3" fitWidth="75" preserveRatio="true"/>
+                        </HBox>
+                        <Label text="YOUR CARDS" styleClass="player-title"/>
+                    </VBox>
+
+                    <VBox GridPane.columnIndex="2" alignment="CENTER_RIGHT">
+                        <ScrollPane fitToWidth="true" prefWidth="250" prefHeight="150" styleClass="log-pane">
+                            <VBox fx:id="logVBox" spacing="4" styleClass="subtitle-box" minHeight="150">
+                                <padding>
+                                    <Insets top="10" right="10" bottom="10" left="10"/>
+                                </padding>
+                                <Label text="GAME INFO HERE" styleClass="info-label"/>
+                            </VBox>
+                        </ScrollPane>
+                    </VBox>
+                </GridPane>
+
+            </VBox>
+        </center>
+
+    </BorderPane>
+</StackPane>

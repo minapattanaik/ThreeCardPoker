@@ -1,0 +1,325 @@
+/* ============================
+   CLASSIC CASINO THEME
+   ============================ */
+
+/* Global root style: Green Felt Table Look */
+.root {
+    -fx-background-color: radial-gradient(center 50% 50%, radius 100%, #2e8b57, #006400);
+    -fx-font-family: "Arial", sans-serif;
+}
+
+/* ============================
+   TITLE
+   ============================ */
+.title-label {
+    -fx-font-family: "Times New Roman", serif;
+    -fx-font-size: 48px;
+    -fx-text-fill: #ffd700; /* Gold */
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.6), 5, 0, 2, 2);
+    -fx-font-weight: bold;
+    -fx-padding: 10 0 20 0;
+}
+
+/* ============================
+   SUBTITLE BOX (Totals, Log Container)
+   ============================ */
+/* Replaces the navy/off-white box from pixel style */
+.subtitle-box {
+    -fx-background-color: rgba(240, 240, 240, 0.9); /* Slightly transparent white */
+    -fx-background-radius: 10px;
+    -fx-border-radius: 10px;
+    -fx-border-color: #ffd700; /* Gold border */
+    -fx-border-width: 2px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.4), 5, 0, 2, 2);
+    -fx-padding: 15;
+}
+
+.subtitle-label {
+    -fx-font-size: 12px;
+    -fx-text-fill: #333;
+}
+
+/* ============================
+   TEXT FIELDS
+   ============================ */
+.text-field {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #ffd700;
+    -fx-border-width: 2px;
+    -fx-background-radius: 5px;
+    -fx-border-radius: 5px;
+    -fx-padding: 10 14 10 14;
+    -fx-font-family: "Arial";
+    -fx-font-size: 12px;
+    -fx-text-fill: #333;
+}
+
+.text-field:focused {
+    -fx-background-color: #fff;
+    -fx-border-color: #fff;
+    -fx-effect: dropshadow(gaussian, #ffd700, 5, 0, 0, 0);
+}
+
+/* ============================
+   CONNECT/GAME BUTTONS
+   ============================ */
+/* Mapping .pixel-button to a smooth "Casino Chip" style button */
+.pixel-button {
+    -fx-background-color: linear-gradient(to bottom, #b22222, #800000); /* Red Gradient */
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 20px;
+    -fx-border-radius: 20px;
+    -fx-border-color: #ffd700;
+    -fx-border-width: 2px;
+    -fx-padding: 8 20 8 20;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 3, 0, 2, 2);
+}
+
+.pixel-button:hover {
+    -fx-background-color: linear-gradient(to bottom, #ff4444, #b22222);
+}
+
+.pixel-button:disabled {
+    -fx-background-color: #555555;
+    -fx-border-color: #333333;
+    -fx-opacity: 0.6;
+}
+
+/* ============================
+   STATUS LABEL
+   ============================ */
+.status-label {
+    -fx-text-fill: #ffd700;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+}
+
+/* Dealer title */
+.dealer-title {
+    -fx-font-size: 24px;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-family: "Times New Roman";
+    -fx-effect: dropshadow(one-pass-box, black, 2, 0.5, 0, 0);
+}
+
+/* Bet Titles */
+.bet-title {
+    -fx-text-fill: #ffd700;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow(one-pass-box, black, 2, 0.5, 0, 0);
+}
+
+/* ============================
+   BETTING CIRCLES
+   ============================ */
+.bet-circle {
+    -fx-min-width: 110px;
+    -fx-min-height: 110px;
+    -fx-max-width: 110px;
+    -fx-max-height: 110px;
+    -fx-background-color: rgba(0, 0, 0, 0.3); /* Dark translucent background */
+    -fx-border-color: #ffd700;
+    -fx-border-width: 3px;
+    -fx-background-radius: 50%; /* Perfect circle */
+    -fx-border-radius: 50%;
+}
+
+/* Amount inside bet circle */
+.bet-amount {
+    -fx-text-fill: #ffd700;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+}
+/* ============================
+   ARROWS
+   ============================ */
+.arrow-button {
+    /* FORCE A STANDARD FONT to ensure arrows (▲ ▼) display */
+    -fx-font-family: "Arial";
+    -fx-font-weight: bold;
+    -fx-font-size: 12px;
+
+    /* High Contrast: Gold Arrow on Dark Green background */
+    -fx-text-fill: #ffd700;
+    -fx-background-color: #004d00;
+    -fx-border-color: #ffd700;
+    -fx-border-width: 1px;
+
+    /* Sizing and Shape */
+    -fx-background-radius: 50%;
+    -fx-border-radius: 50%;
+    -fx-min-width: 26px;
+    -fx-min-height: 26px;
+    -fx-max-width: 26px;
+    -fx-max-height: 26px;
+
+    /* Centering */
+    -fx-alignment: center;
+    -fx-padding: 0;
+    -fx-cursor: hand;
+
+    /* Shadow for depth */
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 3, 0, 1, 1);
+}
+
+.arrow-button:hover {
+    -fx-background-color: #006400; /* Slightly lighter green on hover */
+    -fx-effect: dropshadow(gaussian, #ffd700, 5, 0, 0, 0); /* Gold glow */
+}
+
+.arrow-button:pressed {
+    -fx-background-color: #003300;
+}
+
+/* Player title */
+.player-title {
+    -fx-font-size: 24px;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-family: "Times New Roman";
+    -fx-effect: dropshadow(one-pass-box, black, 2, 0.5, 0, 0);
+}
+
+/* Options menu bar */
+.options-menubar {
+    -fx-background-color: linear-gradient(to bottom, #444, #222); /* Dark gradient */
+    -fx-border-color: #ffd700; /* Gold border */
+    -fx-border-width: 0 0 3px 0;
+    -fx-font-family: "Times New Roman";
+    -fx-font-weight: bold;
+}
+/* You may need to style the Menu items specifically if they are hard to read */
+.menu-button > .label {
+    -fx-text-fill: white;
+}
+
+/* ============================
+   GENERAL INFO LABELS
+   ============================ */
+.info-label {
+    -fx-font-size: 11px;
+    -fx-text-fill: #333;
+    -fx-font-weight: bold;
+}
+
+.info-value {
+    -fx-font-size: 11px;
+    -fx-text-fill: #006400; /* Dark Green money color */
+    -fx-font-weight: bold;
+}
+
+/* ============================
+   CHIP BAR
+   ============================ */
+.chip-button {
+    -fx-font-family: "Arial";
+    -fx-font-size: 10px;
+    -fx-font-weight: bold;
+    -fx-min-width: 35px;  /* Slightly larger than pixel */
+    -fx-pref-width: 35px;
+    -fx-max-width: 35px;
+    -fx-min-height: 35px;
+    -fx-pref-height: 35px;
+    -fx-max-height: 35px;
+
+    -fx-background-color: white;
+    -fx-text-fill: black;
+    -fx-border-color: #333;
+    -fx-border-width: 1px;
+    -fx-background-radius: 50%;
+    -fx-border-radius: 50%;
+    -fx-alignment: center;
+    -fx-padding: 0;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 2, 0, 1, 1);
+}
+
+/* highlight */
+.chip-button:selected {
+    -fx-background-color: #ffd700;
+    -fx-border-color: #b8860b;
+    -fx-text-fill: black;
+}
+
+/* log pane */
+.log-pane {
+    -fx-background-color: transparent;
+    -fx-background: transparent;
+}
+.log-pane .viewport {
+    -fx-background-color: transparent;
+}
+.log-pane .content {
+    -fx-background-color: transparent;
+}
+
+/* log messages */
+.log-message {
+    -fx-font-family: "Arial";
+    -fx-font-size: 10px;
+    -fx-text-fill: #333;
+    -fx-wrap-text: true;
+    -fx-max-width: 210px;
+    -fx-padding: 2 0 2 0;
+}
+
+#logVBox {
+    -fx-background-color: rgba(240, 240, 240, 0.95);
+    -fx-border-color: #ffd700;
+    -fx-border-width: 2px;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+}
+
+.info-box {
+    -fx-background-color: rgba(240, 240, 240, 0.95);
+    -fx-border-color: #000000;
+    -fx-border-width: 3px;
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+    -fx-padding: 15;
+}
+
+/* totals box */
+.totals-box {
+    -fx-background-color: rgba(240, 240, 240, 0.95);
+    -fx-border-color: #ffd700;
+    -fx-border-width: 2px;
+    -fx-padding: 12 14;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+}
+
+.log-line {
+    -fx-font-size: 11px;
+    -fx-text-fill: #333;
+    -fx-border-color: #ccc;
+    -fx-border-width: 0 0 1px 0;
+    -fx-padding: 3 0 3 0;
+}
+
+/* results */
+
+/* stats box */
+.results-box {
+    -fx-background-color: #f9f9f9;
+    -fx-border-color: #ffd700;
+    -fx-border-width: 4px;
+    -fx-border-radius: 15px;
+    -fx-background-radius: 15px;
+    -fx-padding: 30 40;
+    -fx-alignment: center;
+    -fx-max-width: 600px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 10, 0, 5, 5);
+}
+
+.results-line {
+    -fx-font-family: "Times New Roman";
+    -fx-font-size: 20px;
+    -fx-text-fill: #333;
+    -fx-alignment: center;
+    -fx-font-weight: bold;
+}

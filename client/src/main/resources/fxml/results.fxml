@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<StackPane xmlns:fx="http://javafx.com/fxml"
+           fx:controller="ResultsController"
+           prefWidth="1100" prefHeight="650"
+           styleClass="root">
+
+    <Pane fx:id="backgroundPane" />
+
+    <BorderPane>
+        <center>
+            <VBox fx:id="contentBox" alignment="CENTER" spacing="40">
+                <Label fx:id="resultTitle" text="YOU WON!" styleClass="title-label"/>
+
+                <VBox spacing="15" styleClass="results-box">
+                    <Label fx:id="roundWinningsLabel" text="WINNINGS THIS ROUND: $000.00"
+                           styleClass="results-line"/>
+                    <Label fx:id="totalWinningsLabel" text="TOTAL WINNINGS: $000.00"
+                           styleClass="results-line"/>
+                    <Label fx:id="roundsPlayedLabel" text="ROUNDS PLAYED: 0"
+                           styleClass="results-line"/>
+                </VBox>
+
+                <HBox spacing="40" alignment="CENTER">
+                    <padding>
+                        <Insets top="20"/>
+                    </padding>
+                    <Button text="PLAY AGAIN" onAction="#onPlayAgain"
+                            styleClass="pixel-button" prefWidth="350" prefHeight="55" style="-fx-font-size: 18px;"/>
+                    <Button text="EXIT" onAction="#onExit"
+                            styleClass="pixel-button" prefWidth="200" prefHeight="55" style="-fx-font-size: 18px;"/>
+                </HBox>
+            </VBox>
+        </center>
+    </BorderPane>
+</StackPane>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="RulesController"
+            prefWidth="1100" prefHeight="650"
+            styleClass="root">
+
+    <top>
+        <VBox alignment="CENTER" spacing="10">
+            <padding><Insets top="30" bottom="20"/></padding>
+            <Label text="GAME RULES" styleClass="title-label"/>
+        </VBox>
+    </top>
+
+    <center>
+        <VBox alignment="CENTER" spacing="20">
+            <padding><Insets left="50" right="50" bottom="30"/></padding>
+
+            <ScrollPane fitToWidth="true" styleClass="log-pane" vbarPolicy="AS_NEEDED">
+                <content>
+                    <VBox styleClass="log-pane">
+                        <padding><Insets top="20" right="20" bottom="20" left="20"/></padding>
+                        <Label wrapText="true" styleClass="info-label" style="-fx-font-size: 12px; -fx-line-spacing: 5px;"
+                               text="HOW TO PLAY:&#10;&#10;1. ANTE WAGER: Place a bet between $5 - $25 to start.&#10;&#10;2. PAIR PLUS: An optional side bet ($5 - $25). Pays out if your hand is a Pair or better, regardless of the dealer's hand.&#10;&#10;3. THE DEAL: You and the Dealer receive 3 cards. Dealer cards are hidden.&#10;&#10;4. PLAY OR FOLD:&#10;   - FOLD: You lose your Ante and Pair Plus bets.&#10;   - PLAY: You must match your Ante bet exactly.&#10;&#10;5. DEALER QUALIFICATION:&#10;   - The Dealer needs a Queen High or better to qualify.&#10;   - If Dealer does NOT qualify: You win 1:1 on Ante, and the Play bet pushes (returns).&#10;   - If Dealer DOES qualify: Hands are compared. Higher hand wins.&#10;&#10;HAND RANKINGS:&#10;Straight Flush > Three of a Kind > Straight > Flush > Pair > High Card"/>
+                    </VBox>
+                </content>
+            </ScrollPane>
+
+            <Button text="BACK TO GAME" onAction="#onBack" styleClass="pixel-button" prefWidth="200"/>
+        </VBox>
+    </center>
+
+</BorderPane>
