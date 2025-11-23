@@ -62,7 +62,7 @@ A robust client-server desktop game that allows multiple clients to connect to a
 * `Server.java`: Handles socket connections and spawns `ClientHandler` threads.
 * `GamePlay.java`: Server-side logic for deck management and hand evaluation.
 * `GameController.java`: Client-side view logic handling UI updates and user input.
-* 
+
 ## 🔮 Future Roadmap
 
 While the current application successfully implements a multi-threaded Client-Server architecture for concurrent single-player games, future development goals include:
