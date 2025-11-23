@@ -1,0 +1,13 @@
+Deck.class
+ThreeCardLogic.class
+PokerInfo.class
+Card$Suit.class
+JavaFXTemplate.class
+GamePlay.class
+ServerLogController.class
+Hand.class
+Server.class
+ServerIntroController.class
+Card.class
+Result.class
+Server$ClientHandler.class

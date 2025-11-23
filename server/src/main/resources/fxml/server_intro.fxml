@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="ServerIntroController" styleClass="root">
+    <center>
+        <VBox alignment="CENTER" spacing="20">
+            <Label text="CONTROL PANEL" styleClass="title-label"/>
+
+            <VBox styleClass="subtitle-box" maxWidth="300">
+                <TextField fx:id="portField" promptText="ENTER PORT #" alignment="CENTER" styleClass="server-text-field"/>
+            </VBox>
+
+            <HBox alignment="CENTER" spacing="20">
+                <Button text="START SERVER" onAction="#onStartServer" styleClass="pixel-button"/>
+                <Button text="EXIT" onAction="#onExit" styleClass="pixel-button"/>
+            </HBox>
+
+            <VBox styleClass="status-box" maxWidth="350">
+                <Label fx:id="statusLabel" text="STATUS: SERVER STOPPED" styleClass="info-label"/>
+                <Label text="RUNNING ON PORT XXXX" styleClass="info-label" opacity="0.5"/>
+            </VBox>
+        </VBox>
+    </center>
+</BorderPane>

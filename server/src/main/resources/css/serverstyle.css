@@ -1,0 +1,333 @@
+/* ============================
+   PIXEL FONT
+   ============================ */
+
+/* Global root style */
+.root {
+    -fx-background-color: linear-gradient(to bottom, #f7d680, #d77440, #b63a26);
+    -fx-font-family: "Press Start 2P";
+}
+
+/* ============================
+   TITLE
+   ============================ */
+.title-label {
+    -fx-font-size: 28px;
+    -fx-text-fill: #1c141a;
+    -fx-padding: 10 0 20 0;
+}
+
+/* ============================
+   SUBTITLE BOX (NAVY BAR)
+   ============================ */
+.subtitle-box {
+    -fx-background-color: #fdf8ee; /* Off-white color */
+    -fx-border-color: #000000;
+    -fx-border-width: 3px;
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+    -fx-padding: 15;
+}
+
+
+.subtitle-label {
+    -fx-font-size: 12px;
+    -fx-text-fill: white;
+}
+
+/* ============================
+   TEXT FIELDS
+   ============================ */
+.text-field {
+    -fx-background-color: #f3f0e2;
+    -fx-border-color: #000000;
+    -fx-border-width: 4px;
+    -fx-padding: 10 14 10 14;
+    -fx-font-family: "Press Start 2P";
+    -fx-font-size: 12px;
+    -fx-text-fill: #6a6a6a;
+}
+
+.text-field:focused {
+    -fx-background-color: #fff9e5;
+}
+
+/* ============================
+   CONNECT BUTTON
+   ============================ */
+.pixel-button {
+    -fx-background-color: #3b3b3b;
+    -fx-text-fill: white;
+    -fx-padding: 8 20 8 20;
+    -fx-border-color: #000000;
+    -fx-border-width: 3;
+    -fx-background-insets: 0;
+    -fx-effect: dropshadow(gaussian, #000000, 0, 0, 3, 3);
+}
+
+.pixel-button:hover {
+    -fx-background-color: #555555;
+}
+
+/* ============================
+   STATUS LABEL
+   ============================ */
+.status-label {
+    -fx-text-fill: white;
+    -fx-font-size: 11px;
+}
+
+/* Dealer title */
+.dealer-title {
+    -fx-text-fill: #1b1420;
+    -fx-font-size: 14px;
+}
+
+/* Bet Titles */
+.bet-title {
+    -fx-text-fill: #1b1420;
+    -fx-font-size: 12px;
+}
+
+/* Pixel bet circles */
+.bet-circle {
+    -fx-min-width: 110px;
+    -fx-min-height: 110px;
+    -fx-max-width: 110px;
+    -fx-max-height: 110px;
+    -fx-background-color: #fdf8e6;
+    -fx-border-color: #000000;
+    -fx-border-width: 4;
+    -fx-background-radius: 60px;
+    -fx-border-radius: 60px;
+}
+
+/* Amount inside bet circle */
+.bet-amount {
+    -fx-text-fill: #000;
+    -fx-font-size: 14px;
+}
+
+/* Pixel arrows */
+.arrow-button {
+    -fx-font-size: 8px;
+    -fx-min-width: 24px;
+    -fx-pref-width: 24px;
+    -fx-max-width: 24px;
+    -fx-min-height: 18px;
+    -fx-pref-height: 18px;
+    -fx-max-height: 18px;
+}
+
+.arrow-button:hover {
+    -fx-background-color: #d4d4d4;
+}
+
+/* Player title */
+.player-title {
+    -fx-font-size: 14px;
+    -fx-text-fill: black;
+}
+
+/* Options menu bar */
+.options-menubar {
+    -fx-background-color: #f9f3e5;
+    -fx-border-color: black;
+    -fx-border-width: 3px;
+}
+
+/* ===== GENERAL ===== */
+
+.info-label {
+    -fx-font-size: 10px;
+    -fx-text-fill: #000000;
+}
+
+.info-value {
+    -fx-font-size: 10px;
+    -fx-text-fill: #000000;
+}
+
+/* ===== PIXEL BUTTONS ===== */
+
+
+/* ===== ARROW BUTTONS ===== */
+
+
+/* ===== BET CIRCLES ===== */
+
+/* ===== CHIP BAR ===== */
+
+/* FIXED CHIP BUTTON SIZING */
+.chip-button {
+    -fx-font-family: "Press Start 2P";
+    -fx-font-size: 6px;      /* much smaller for pixel font */
+    -fx-min-width: 22px;
+    -fx-pref-width: 22px;
+    -fx-max-width: 22px;
+    -fx-min-height: 20px;
+    -fx-pref-height: 20px;
+    -fx-max-height: 20px;
+
+    -fx-background-color: #ffffff;
+    -fx-text-fill: #000000;
+    -fx-border-color: #000000;
+    -fx-border-width: 2;
+    -fx-alignment: center;
+    -fx-padding: 0;
+}
+
+/* highlight */
+.chip-button:selected {
+    -fx-background-color: #000000;
+    -fx-text-fill: #ffffff;
+}
+
+/* ===== LOG PANE ===== */
+
+/* Ensure the log pane scroll area is transparent so the subtitle-box shows through */
+.log-pane {
+    -fx-background-color: transparent;
+    -fx-background: transparent;
+}
+.log-pane .viewport {
+    -fx-background-color: transparent;
+}
+
+.log-pane .content {
+    -fx-background-color: transparent;
+}
+
+.log-message {
+    -fx-font-family: "Press Start 2P"; /* Ensure it keeps the font */
+    -fx-font-size: 8px;                /* Keep text small enough to fit */
+    -fx-text-fill: black;
+    -fx-wrap-text: true;               /* CRITICAL: This turns on wrapping */
+    -fx-max-width: 210px;              /* CRITICAL: Forces wrap before hitting scrollbar */
+}
+
+#logVBox {
+    -fx-background-color: #fdf8ee;
+    -fx-border-color: #000000;
+    -fx-border-width: 3;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+}
+
+/* White totals box */
+.totals-box {
+    -fx-background-color: #fffdf6;
+    -fx-border-color: black;
+    -fx-border-width: 3px;
+    -fx-padding: 12 14;
+    -fx-background-radius: 8;
+    -fx-border-radius: 8;
+}
+
+/* Log dividing lines */
+.log-line {
+    -fx-font-size: 10px;
+    -fx-text-fill: black;
+    -fx-border-color: black;
+    -fx-border-width: 0 0 2 0;
+    -fx-padding: 3 0 3 0;
+}
+
+/* ... existing CSS ... */
+
+/* ============================
+   RESULTS SCREEN
+   ============================ */
+
+/* The main title (e.g., "YOU WON!") */
+.title-label {
+    -fx-font-size: 48px;
+    -fx-padding: 20 0;
+    /* Color is set dynamically in the controller */
+}
+
+/* The white box containing the stats */
+.results-box {
+    -fx-background-color: #fdf8e6; /* Off-white background */
+    -fx-border-color: black;
+    -fx-border-width: 4px;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+    -fx-padding: 30 40; /* Generous padding */
+    -fx-alignment: center;
+    -fx-max-width: 600px; /* Prevents it from being too wide on large screens */
+    -fx-effect: dropshadow(gaussian, #000000, 0, 0, 4, 4); /* Simple shadow for depth */
+}
+
+/* The text lines inside the results box */
+.results-line {
+    -fx-font-family: "Press Start 2P";
+    -fx-font-size: 16px;
+    -fx-text-fill: black;
+    -fx-alignment: center;
+}
+
+/* Base Gradient */
+.root {
+    -fx-background-color: linear-gradient(to bottom, #f7d680, #d77440, #b63a26);
+    -fx-font-family: "Press Start 2P";
+}
+
+/* Text Field for Port */
+.server-text-field {
+    -fx-background-color: transparent;
+    -fx-text-fill: #555;
+    -fx-font-family: "Press Start 2P";
+    -fx-alignment: center;
+}
+
+/* Status Box (Bottom of Intro) */
+.status-box {
+    -fx-background-color: #fdf8e6;
+    -fx-border-color: black;
+    -fx-border-width: 3px;
+    -fx-padding: 15;
+    -fx-alignment: center;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+}
+
+/* List View Stripes */
+.server-log-list {
+    -fx-background-color: #fdf8e6;
+    -fx-border-color: black;
+    -fx-border-width: 4px;
+}
+
+.server-log-list .list-cell {
+    -fx-font-family: "Press Start 2P"; /* Or a simpler font for readability */
+    -fx-font-size: 10px;
+    -fx-padding: 8 5 8 5;
+    -fx-text-fill: black;
+}
+
+/* Alternating Colors */
+.server-log-list .list-cell:odd {
+    -fx-background-color: #fdf8e6; /* White-ish */
+}
+.server-log-list .list-cell:even {
+    -fx-background-color: #f7d680; /* Yellow-ish */
+}
+.server-log-list .list-cell:empty {
+    -fx-background-color: #fdf8e6;
+}
+
+/* Re-use these from your existing CSS */
+.pixel-button {
+    -fx-background-color: #3b3b3b;
+    -fx-text-fill: white;
+    -fx-border-color: black;
+    -fx-border-width: 3;
+}
+.pixel-button:hover { -fx-background-color: #555; }
+.subtitle-box {
+    -fx-background-color: #fdf8e6;
+    -fx-border-color: black;
+    -fx-border-width: 3;
+    -fx-padding: 15;
+}
