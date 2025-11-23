@@ -58,10 +58,42 @@ A robust client-server desktop game that allows multiple clients to connect to a
 
 ## 📂 Project Structure
 
-* `PokerInfo.java`: The shared DTO class used for network communication.
-* `Server.java`: Handles socket connections and spawns `ClientHandler` threads.
-* `GamePlay.java`: Server-side logic for deck management and hand evaluation.
-* `GameController.java`: Client-side view logic handling UI updates and user input.
+### 🖥️ Client Module (`projectThreeClient`)
+*Handles the JavaFX GUI, animations, and network communication.*
+
+**Source Code (`src/main/java/`)**
+* `JavaFXTemplate.java`: Main application entry point; handles scene switching and CSS theming.
+* `ClientConnect.java`: Manages the background socket thread for server communication.
+* `PokerInfo.java`: Shared DTO (Data Transfer Object) for sending game state over the network.
+* `GameController.java`: Controls the main gameplay UI (bets, card display, animations).
+* `EntryController.java`: Handles the initial connection screen (IP/Port input).
+* `ResultsController.java`: Manages the win/loss screen and animations.
+* `RulesController.java`: Displays the game rules.
+* `CardImageUtil.java`: Utility for loading card assets based on the active theme.
+
+**Resources (`src/main/resources/`)**
+* **FXML:** `entry.fxml`, `game.fxml`, `results.fxml`, `rules.fxml`
+* **CSS:** `pixelstyle.css` (Retro), `classicstyle.css` (Casino), `nightstyle.css` (Dark Mode)
+* **Assets:** Card images (Pixel, Classic, Night variants) and Fonts.
+
+---
+
+### 🗄️ Server Module (`projectThreeServer`)
+*Handles all game logic, deck management, and win/loss calculations.*
+
+**Source Code (`src/main/java/`)**
+* `Server.java`: Main backend logic; spawns `ClientHandler` threads for each player.
+* `JavaFXTemplate.java`: Server GUI entry point.
+* `ServerIntroController.java`: Configuration screen for setting the listening port.
+* `ServerLogController.java`: Dashboard displaying active clients and game logs.
+* `GamePlay.java`: Manages the state of a single game round (dealing, folding, playing).
+* `ThreeCardLogic.java`: Static logic for evaluating hand rankings and payouts.
+* `Deck.java` & `Hand.java`: Classes for managing the 52-card deck and player hands.
+* `PokerInfo.java`: Shared DTO (must match Client version exactly).
+* `Card.java`: Model class representing a single playing card.
+
+**Testing (`src/test/java/`)**
+* `ThreeCardLogicTest.java`: JUnit 5 test suite verifying hand evaluations and payout logic.
 
 ## 🔮 Future Roadmap
 
